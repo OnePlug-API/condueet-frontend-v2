@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 const config: Config = {
   content: [
@@ -8,13 +9,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#000D50", // navy
+        accent: "#F26A52", // coral
+        light: {
+          lavender: "#919CFD", // lavender
+          stone: "#868484", // stone
+        },
+        background: "#F5F5F5", // porcelain
+      },
+      screens: {
+        sm: "480px", // mobiles
+        md: "768px", // tablets
+        lg: "976px", // laptops
+        xl: "1440px", // desktops
       },
     },
   },
-  plugins: [],
+  plugins: [tailwindcssAnimate],
 };
 export default config;
