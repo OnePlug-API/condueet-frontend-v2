@@ -12,10 +12,12 @@ const config: Config = {
       colors: {
         primary: "#000D50", // navy
         accent: "#F26A52", // coral
+        lavender: "#919CFD",
         light: {
-          lavender: "#919CFD", // lavender
+          lavender: "#DBE1FD", // lavender
           stone: "#868484", // stone
         },
+        fade: "#A3A3A3",
         background: "#F5F5F5", // porcelain
       },
       screens: {
