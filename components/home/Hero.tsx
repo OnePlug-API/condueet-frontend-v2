@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Container from "../container/Container";
-import { motion } from "framer-motion";
 import { MotionDiv, MotionH2, MotionP } from "../motion/motion";
 
 const Hero = () => {
@@ -34,7 +33,7 @@ const Hero = () => {
           >
             <Link
               href="/register"
-              className="w-64 rounded bg-accent py-3 text-center transition-colors hover:bg-accent/60 max-md:w-full max-md:py-2 max-md:text-sm max-md:font-semibold"
+              className="w-64 rounded bg-accent py-3 text-center font-semibold transition-colors hover:bg-accent/60 max-md:w-full max-md:py-2 max-md:text-sm"
             >
               Get Started
             </Link>

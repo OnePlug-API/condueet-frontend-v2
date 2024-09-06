@@ -75,7 +75,7 @@ const DropdownMenu = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute left-0 top-full z-10 w-full overflow-hidden bg-light-lavender lg:hidden"
+            className="absolute left-0 top-full z-50 w-full overflow-hidden bg-light-lavender lg:hidden"
             initial="closed"
             animate="open"
             exit="closed"

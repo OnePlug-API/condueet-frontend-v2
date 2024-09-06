@@ -16,6 +16,7 @@ const config: Config = {
         light: {
           lavender: "#DBE1FD", // lavender
           stone: "#868484", // stone
+          sky: "#D9F2FF",
         },
         fade: "#A3A3A3",
         background: "#F5F5F5", // porcelain
