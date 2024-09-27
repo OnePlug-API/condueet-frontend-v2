@@ -10,8 +10,30 @@ import Header from "@/components/header";
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
-  title: "Condueet",
-  description: "Condueet | Home",
+  title: "Condueet - Home",
+  description: "Simplifying Finances for an Enjoyable Retirement",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Condueet",
+  },
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
+  openGraph: {
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 600,
+        height: 400,
+        type: "image/png",
+      },
+    ],
+  },
+  robots: "INDEX, FOLLOW",
+  metadataBase: new URL("https://condueet.onrender.com"),
 };
 
 export default function RootLayout({

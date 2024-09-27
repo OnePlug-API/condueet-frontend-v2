@@ -1,4 +1,10 @@
 import ForgotPasswordForm from "@/components/forgot-password/form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Condueet - Forgot Password",
+  description: "Reset your password",
+};
 
 export default function Page() {
   return (

@@ -2,7 +2,13 @@ import { MotionDiv } from "@/components/motion";
 import RegisterForm from "@/components/register/form";
 import CondueetLogo from "@/components/ui/logo";
 import condueetLady from "@assets/condueet-lady-working.svg";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Condueet - Get Access",
+  description: "Create an account",
+};
 
 export default function Page() {
   return (
