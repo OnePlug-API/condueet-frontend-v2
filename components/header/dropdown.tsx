@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Container from "../container";
+import { Button } from "../ui/button";
 
 interface Link {
   id: number;
@@ -38,8 +39,6 @@ export const links: Link[] = [
 
 const DropdownMenu = () => {
   const [open, setOpen] = useState(false);
-
-  const toggleOpen = () => setOpen((prev) => !prev);
 
   const menuVariants: Variants = {
     closed: {
@@ -90,9 +89,25 @@ const DropdownMenu = () => {
 
   return (
     <Fragment>
-      <button onClick={toggleOpen} className="lg:hidden">
-        {open ? <X className="w-8" /> : <Menu className="w-8" />}
-      </button>
+      {open ? (
+        <Button
+          variant={"ghost"}
+          size={"icon"}
+          onClick={() => setOpen(false)}
+          className="hover:bg-transparent lg:hidden"
+        >
+          <X className="w-8" />
+        </Button>
+      ) : (
+        <Button
+          variant={"ghost"}
+          size={"icon"}
+          onClick={() => setOpen(true)}
+          className="hover:bg-transparent lg:hidden"
+        >
+          <Menu className="w-8" />
+        </Button>
+      )}
       <AnimatePresence>
         {open && (
           <motion.div

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section className="grid grid-cols-[1.2fr_1.8fr] overflow-y-hidden max-md:grid-cols-1 md:h-screen">
-      <div className="h-screen space-y-8 bg-[#e9effc] py-6 max-md:hidden">
+      <div className="h-screen space-y-8 overflow-hidden bg-[#e9effc] py-6 max-md:hidden">
         <div className="flex flex-col items-center justify-center">
           <CondueetLogo />
         </div>
