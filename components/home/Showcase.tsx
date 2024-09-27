@@ -4,6 +4,7 @@ import money_flow from "@assets/money-flow.png";
 import digital_loan from "@assets/digital-loan.png";
 import verify_account from "@assets/verify-account.png";
 import Link from "next/link";
+import { MotionDiv } from "../motion";
 
 const Showcase = () => {
   return (
@@ -34,8 +35,10 @@ const Showcase = () => {
               Get Started
             </Link>
           </div>
-          <div
-            data-aos="fade-left"
+          <MotionDiv
+            initial={{ x: 20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
             className="relative z-10 flex items-center justify-center"
           >
             <Image
@@ -46,13 +49,15 @@ const Showcase = () => {
               className="z-10 w-[95%] max-w-full object-contain lg:w-full"
             />
             {/* <div className="absolute left-[30%] top-[-40%] z-0 h-full max-h-[600px] w-screen -rotate-[25deg] transform rounded-full bg-primary/80 xl:left-[50%]"></div> */}
-          </div>
+          </MotionDiv>
         </Container>
       </div>
       <div>
         <Container className="z-10 grid grid-cols-1 items-center gap-12 lg:h-screen lg:max-h-[500px] lg:grid-cols-2 lg:gap-8">
-          <div
-            data-aos="fade-right"
+          <MotionDiv
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
             className="relative z-10 flex items-center justify-center max-lg:order-2"
           >
             <Image
@@ -63,7 +68,7 @@ const Showcase = () => {
               className="z-10 w-[95%] max-w-full object-contain lg:w-full"
             />
             {/* <div className="absolute left-[30%] top-[-40%] z-0 h-full max-h-[600px] w-screen -rotate-[25deg] transform rounded-full bg-primary/80 xl:left-[50%]"></div> */}
-          </div>
+          </MotionDiv>
           <div className="max-lg:order-1">
             <h4 className="text-stone text-base">
               FULL CREDIT ASSESSMENT & INSURANCE
@@ -105,8 +110,10 @@ const Showcase = () => {
               Get Started
             </Link>
           </div>
-          <div
-            data-aos="fade-left"
+          <MotionDiv
+            initial={{ x: 20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
             className="relative z-10 flex items-center justify-center"
           >
             <Image
@@ -117,7 +124,7 @@ const Showcase = () => {
               className="z-10 w-[95%] max-w-full object-contain lg:w-full"
             />
             {/* <div className="absolute left-[30%] top-[-40%] z-0 h-full max-h-[600px] w-screen -rotate-[25deg] transform rounded-full bg-primary/80 xl:left-[50%]"></div> */}
-          </div>
+          </MotionDiv>
         </Container>
       </div>
     </div>
