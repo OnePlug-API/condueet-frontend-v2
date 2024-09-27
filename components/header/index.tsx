@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Container from "../container/container";
+import Container from "../container";
 import DropdownMenu from "./dropdown";
 import Nav from "./nav";
 import CondueetLogo from "../ui/logo";

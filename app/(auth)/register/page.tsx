@@ -1,4 +1,4 @@
-import { MotionDiv } from "@/components/motion/motion";
+import { MotionDiv } from "@/components/motion";
 import RegisterForm from "@/components/register/form";
 import CondueetLogo from "@/components/ui/logo";
 import condueetLady from "@assets/condueet-lady-working.svg";

@@ -3,9 +3,9 @@ import { Lato } from "next/font/google";
 import "../globals.scss";
 import { PropsWithChildren, ReactNode } from "react";
 import AOSinit from "@/lib/aos";
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
+import Footer from "@/components/footer";
 import NextjsTopLoader from "nextjs-toploader";
+import Header from "@/components/header";
 
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 

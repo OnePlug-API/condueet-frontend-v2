@@ -1,4 +1,4 @@
-import Container from "../container/container";
+import Container from "../container";
 import Image from "next/image";
 import money_flow from "@assets/money-flow.png";
 import digital_loan from "@assets/digital-loan.png";

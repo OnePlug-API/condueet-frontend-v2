@@ -5,7 +5,7 @@ import { Menu, X } from "react-feather";
 import Link from "next/link";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { usePathname } from "next/navigation";
-import Container from "../container/container";
+import Container from "../container";
 
 interface Link {
   id: number;

@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { MotionLink } from "../motion/motion";
+import { MotionLink } from "../motion";
 import Image from "next/image";
 
 const CondueetLogo = () => {

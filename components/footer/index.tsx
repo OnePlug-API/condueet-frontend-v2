@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Container from "../container/container";
-import { MotionLink } from "../motion/motion";
+import Container from "../container";
+import { MotionLink } from "../motion";
 import {
   FacebookOutlined,
   InstagramOutlined,
