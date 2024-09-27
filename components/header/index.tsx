@@ -2,7 +2,7 @@ import Link from "next/link";
 import Container from "../container";
 import DropdownMenu from "./dropdown";
 import CondueetLogo from "../ui/logo";
-import Nav from "./nav";
+import Navbar from "./navbar";
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
       <Container className="flex items-center justify-between py-6">
         <CondueetLogo />
 
-        <Nav />
+        <Navbar />
 
         <div className="flex flex-1 items-center justify-end gap-4 max-lg:mr-8 max-md:hidden">
           <Link

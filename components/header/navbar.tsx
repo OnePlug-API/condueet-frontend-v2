@@ -59,7 +59,7 @@ export const links: Link[] = [
   },
 ];
 
-const Nav = () => {
+const Navbar = () => {
   const pathname = usePathname();
 
   return (
@@ -90,4 +90,4 @@ const Nav = () => {
     </nav>
   );
 };
-export default Nav;
+export default Navbar;
