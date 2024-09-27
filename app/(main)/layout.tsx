@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Lato } from "next/font/google";
-import "./globals.scss";
+import { Lato } from "next/font/google";
+import "../globals.scss";
 import { PropsWithChildren, ReactNode } from "react";
-import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
 import AOSinit from "@/lib/aos";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
+import NextjsTopLoader from "nextjs-toploader";
 
-const inter = Inter({ subsets: ["latin"] });
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
@@ -23,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lato.className} overflow-x-hidden bg-background`}>
         <AOSinit />
+        <NextjsTopLoader color="#F26A52" />
         <main className="app">
           <Header />
           <section>{children}</section>

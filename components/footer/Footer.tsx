@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Container from "../container/Container";
+import Container from "../container/container";
 import { MotionLink } from "../motion/motion";
 import {
   FacebookOutlined,
@@ -63,25 +63,25 @@ const Footer = () => {
           <div className="mt-6 flex items-center gap-4">
             <a
               href="#"
-              className="bg-light-sky hover:bg-light-sky/60 flex h-12 w-12 items-center justify-center rounded-full text-lg text-primary transition-colors max-md:h-9 max-md:w-9 md:text-xl"
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-light-sky text-lg text-primary transition-colors hover:bg-light-sky/60 max-md:h-9 max-md:w-9 md:text-xl"
             >
               <XOutlined />
             </a>
             <a
               href="#"
-              className="bg-light-sky hover:bg-light-sky/60 flex h-12 w-12 items-center justify-center rounded-full text-lg text-primary transition-colors max-md:h-9 max-md:w-9 md:text-xl"
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-light-sky text-lg text-primary transition-colors hover:bg-light-sky/60 max-md:h-9 max-md:w-9 md:text-xl"
             >
               <LinkedinOutlined />
             </a>
             <a
               href="#"
-              className="bg-light-sky hover:bg-light-sky/60 flex h-12 w-12 items-center justify-center rounded-full text-lg text-primary transition-colors max-md:h-9 max-md:w-9 md:text-xl"
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-light-sky text-lg text-primary transition-colors hover:bg-light-sky/60 max-md:h-9 max-md:w-9 md:text-xl"
             >
               <InstagramOutlined />
             </a>
             <a
               href="#"
-              className="bg-light-sky hover:bg-light-sky/60 flex h-12 w-12 items-center justify-center rounded-full text-lg text-primary transition-colors max-md:h-9 max-md:w-9 md:text-xl"
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-light-sky text-lg text-primary transition-colors hover:bg-light-sky/60 max-md:h-9 max-md:w-9 md:text-xl"
             >
               <FacebookOutlined />
             </a>

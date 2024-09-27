@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Container from "../container/Container";
+import Container from "../container/container";
 import { MotionDiv, MotionH2, MotionP } from "../motion/motion";
 
 const Hero = () => {
