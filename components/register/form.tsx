@@ -26,7 +26,7 @@ import {
   SelectValue,
 } from "../ui/select";
 import { countries } from "@/lib/country";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { Checkbox } from "../ui/checkbox";
 import Link from "next/link";
@@ -55,212 +55,226 @@ const RegisterForm = () => {
   };
 
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="mx-auto w-full max-w-xl space-y-6"
-      >
-        <div className="grid grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="firstName"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-base text-lavender-text">
-                  First Name
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="Enter your first name"
-                    {...field}
-                    className={cn("h-11 focus-visible:ring-lavender-text")}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="lastName"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-base text-lavender-text">
-                  Last Name
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="Enter your last name"
-                    {...field}
-                    className={cn("h-11 focus-visible:ring-lavender-text")}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="text-base text-lavender-text">
-                Work Email
-              </FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Enter your email address"
-                  {...field}
-                  className={cn("h-11 focus-visible:ring-lavender-text")}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <div className="grid grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="company"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-base text-lavender-text">
-                  Company
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="Enter your company"
-                    {...field}
-                    className={cn("h-11 focus-visible:ring-lavender-text")}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="phoneNumber"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-base text-lavender-text">
-                  Phone Number
-                </FormLabel>
-                <FormControl>
-                  <PhoneInput
-                    placeholder="Enter phone number"
-                    value={field.value}
-                    defaultCountry={"NG"}
-                    onChange={field.onChange}
-                    inputComponent={CustomInput}
-                    className="rounded-lg border border-solid border-gray-200 px-4 py-2 focus:border-none focus:outline-none"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="country"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Country</FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
+    <Fragment>
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="mx-auto w-full max-w-xl space-y-6"
+        >
+          <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
+            <FormField
+              control={form.control}
+              name="firstName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-base text-lavender-text">
+                    First Name
+                  </FormLabel>
                   <FormControl>
-                    <SelectTrigger
-                      className={cn("h-11 focus-visible:ring-lavender-text")}
-                    >
-                      <SelectValue placeholder="Select your country" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {countries.map((country) => (
-                      <SelectItem key={country} value={country}>
-                        {country}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-base text-lavender-text">
-                  Password
-                </FormLabel>
-                <FormControl>
-                  <div className="relative">
                     <Input
-                      type={showPassword ? "text" : "password"}
-                      placeholder="Enter your password"
+                      placeholder="Enter your first name"
                       {...field}
                       className={cn("h-11 focus-visible:ring-lavender-text")}
                     />
-                    <Button
-                      type="button"
-                      variant={"ghost"}
-                      size={"icon"}
-                      onClick={() => setShowPassword((prev) => !prev)}
-                      className="absolute right-1 top-1/2 -translate-y-1/2 hover:bg-transparent"
-                    >
-                      {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
-                    </Button>
-                  </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="lastName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-base text-lavender-text">
+                    Last Name
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Enter your last name"
+                      {...field}
+                      className={cn("h-11 focus-visible:ring-lavender-text")}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-base text-lavender-text">
+                  Work Email
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Enter your email address"
+                    {...field}
+                    className={cn("h-11 focus-visible:ring-lavender-text")}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-        </div>
-        <FormField
-          control={form.control}
-          name="readPrivacyPolicy"
-          render={({ field }) => (
-            <FormItem className="flex items-center space-x-3 space-y-0">
-              <FormControl>
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
-              </FormControl>
-              <div>
-                <FormLabel className="text-base text-gray-600">
-                  Read our privacy policy{" "}
-                  <Link
-                    href="/privacy-policy"
-                    className="font-medium text-accent"
+          <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
+            <FormField
+              control={form.control}
+              name="company"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-base text-lavender-text">
+                    Company
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Enter your company"
+                      {...field}
+                      className={cn("h-11 focus-visible:ring-lavender-text")}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phoneNumber"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-base text-lavender-text">
+                    Phone Number
+                  </FormLabel>
+                  <FormControl>
+                    <PhoneInput
+                      placeholder="Enter phone number"
+                      value={field.value}
+                      defaultCountry={"NG"}
+                      onChange={field.onChange}
+                      inputComponent={CustomInput}
+                      className="rounded-lg border border-solid border-gray-200 px-4 py-2 focus:border-none focus:outline-none"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
+            <FormField
+              control={form.control}
+              name="country"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-base text-lavender-text">
+                    Country
+                  </FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
                   >
-                    Learn More
-                  </Link>
-                </FormLabel>
-              </div>
-            </FormItem>
-          )}
-        />
-        <Button
-          type="submit"
-          className={cn(
-            "h-14 w-full bg-primary text-lg font-medium hover:bg-primary/75",
-          )}
-          size={"lg"}
-        >
-          Submit
-        </Button>
-      </form>
-    </Form>
+                    <FormControl>
+                      <SelectTrigger
+                        className={cn("h-11 focus-visible:ring-lavender-text")}
+                      >
+                        <SelectValue placeholder="Select your country" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {countries.map((country) => (
+                        <SelectItem key={country} value={country}>
+                          {country}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-base text-lavender-text">
+                    Password
+                  </FormLabel>
+                  <FormControl>
+                    <div className="relative">
+                      <Input
+                        type={showPassword ? "text" : "password"}
+                        placeholder="Enter your password"
+                        {...field}
+                        className={cn("h-11 focus-visible:ring-lavender-text")}
+                      />
+                      <Button
+                        type="button"
+                        variant={"ghost"}
+                        size={"icon"}
+                        onClick={() => setShowPassword((prev) => !prev)}
+                        className="absolute right-1 top-1/2 -translate-y-1/2 hover:bg-transparent"
+                      >
+                        {showPassword ? (
+                          <EyeOff size={16} />
+                        ) : (
+                          <Eye size={16} />
+                        )}
+                      </Button>
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <FormField
+            control={form.control}
+            name="readPrivacyPolicy"
+            render={({ field }) => (
+              <FormItem className="flex items-center space-x-3 space-y-0">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <div>
+                  <FormLabel className="text-base text-gray-600">
+                    Read our privacy policy{" "}
+                    <Link
+                      href="/privacy-policy"
+                      className="font-medium text-accent"
+                    >
+                      Learn More
+                    </Link>
+                  </FormLabel>
+                </div>
+              </FormItem>
+            )}
+          />
+          <Button
+            type="submit"
+            className={cn(
+              "h-14 w-full bg-primary text-lg font-medium hover:bg-primary/75",
+            )}
+            size={"lg"}
+          >
+            Submit
+          </Button>
+        </form>
+      </Form>
+      <p className="mt-4 text-center">
+        Already have an account?{" "}
+        <Link href={"/login"} className="text-primary">
+          Login
+        </Link>
+      </p>
+    </Fragment>
   );
 };
 export default RegisterForm;

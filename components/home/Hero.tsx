@@ -33,7 +33,7 @@ const Hero = () => {
           >
             <Link
               href="/register"
-              className="w-64 rounded bg-accent py-3 text-center font-semibold transition-colors hover:bg-accent/60 max-md:w-full max-md:py-2 max-md:text-sm"
+              className="flex h-12 w-64 items-center justify-center rounded bg-accent py-3 text-center font-semibold transition-colors hover:bg-accent/60 max-md:py-2 max-md:text-sm"
             >
               Get Started
             </Link>

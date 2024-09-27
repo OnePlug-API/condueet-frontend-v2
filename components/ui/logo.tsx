@@ -11,7 +11,7 @@ const CondueetLogo = () => {
         href="/"
         className="flex flex-1 items-center gap-2"
       >
-        <div className="w-12 max-md:w-8">
+        <div className="w-10 max-md:w-8">
           <Image
             src="/logo.png"
             alt="Condueet Logo"

@@ -6,9 +6,11 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <section className="grid h-screen grid-cols-[1.2fr_1.8fr] overflow-y-hidden">
-      <div className="flex h-screen flex-col items-center space-y-8 bg-[#e9effc] py-6">
-        <CondueetLogo />
+    <section className="grid grid-cols-[1.2fr_1.8fr] overflow-y-hidden max-md:grid-cols-1 md:h-screen">
+      <div className="h-screen space-y-8 bg-[#e9effc] py-6 max-md:hidden">
+        <div className="flex flex-col items-center justify-center">
+          <CondueetLogo />
+        </div>
         <p className="w-full text-center text-lavender-text">
           Join Condueet to enjoy seamless API <br /> integrations and financial
           services
@@ -28,10 +30,13 @@ export default function Page() {
           />
         </MotionDiv>
       </div>
-      <section className="h-screen overflow-y-auto py-8">
+      <section className="overflow-y-auto py-8 max-md:mx-auto max-md:w-[90%] md:h-screen md:p-8">
         <div className="w-full">
           <header className="mb-4 space-y-2 text-center">
-            <h3 className="text-3xl font-semibold text-lavender-text">
+            {/* <div className="flex flex-col items-center justify-center pb-6 md:hidden">
+              <CondueetLogo />
+            </div> */}
+            <h3 className="text-3xl font-semibold text-lavender-text max-md:text-xl">
               Get Access
             </h3>
             <p>To get access, please provide the details below</p>

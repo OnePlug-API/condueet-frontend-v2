@@ -1,5 +1,14 @@
 import { z } from "zod";
 
+export const LoginFormSchema = z.object({
+  email: z
+    .string()
+    .email({ message: "Email is invalid" })
+    .min(1, { message: "Email is required" }),
+  password: z.string().min(1, { message: "Password is required" }),
+  rememberMe: z.boolean().optional(),
+});
+
 export const RegisterFormSchema = z.object({
   firstName: z.string().min(1, { message: "First name is required" }),
   lastName: z.string().min(1, { message: "Last name is required" }),
