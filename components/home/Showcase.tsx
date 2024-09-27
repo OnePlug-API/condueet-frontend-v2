@@ -3,6 +3,7 @@ import Image from "next/image";
 import money_flow from "@assets/money-flow.png";
 import digital_loan from "@assets/digital-loan.png";
 import verify_account from "@assets/verify-account.png";
+import Link from "next/link";
 
 const Showcase = () => {
   return (
@@ -26,9 +27,12 @@ const Showcase = () => {
               Providing cutting-edge solutions such as data aggregation,
               financial insight, and efficient account verification
             </p>
-            <button className="mt-10 w-48 rounded bg-primary py-3 font-semibold text-white transition-colors hover:bg-primary/60 max-md:py-2">
+            <Link
+              href="/register"
+              className="mt-10 flex h-12 w-48 items-center justify-center rounded bg-primary py-3 text-center font-semibold text-white transition-colors hover:bg-primary/60 max-md:py-2 max-md:text-sm"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
           <div
             data-aos="fade-left"
@@ -72,9 +76,12 @@ const Showcase = () => {
               Facilitating accurate credit evaluations and broadening credit
               opportunities for both borrowers and lenders
             </p>
-            <button className="mt-10 w-48 rounded bg-primary py-3 font-semibold text-white transition-colors hover:bg-primary/60 max-md:py-2">
+            <Link
+              href="/register"
+              className="mt-10 flex h-12 w-48 items-center justify-center rounded bg-primary py-3 text-center font-semibold text-white transition-colors hover:bg-primary/60 max-md:py-2 max-md:text-sm"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
         </Container>
       </div>
@@ -91,9 +98,12 @@ const Showcase = () => {
               Equipping fintechs and enterprises with robust identity
               verification and risk assessment tools
             </p>
-            <button className="mt-10 w-48 rounded bg-primary py-3 font-semibold text-white transition-colors hover:bg-primary/60 max-md:py-2">
+            <Link
+              href="/register"
+              className="mt-10 flex h-12 w-48 items-center justify-center rounded bg-primary py-3 text-center font-semibold text-white transition-colors hover:bg-primary/60 max-md:py-2 max-md:text-sm"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
           <div
             data-aos="fade-left"
