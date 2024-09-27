@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { Menu, X } from "react-feather";
 import Link from "next/link";
 import { motion, AnimatePresence, Variants } from "framer-motion";
@@ -65,6 +65,27 @@ const DropdownMenu = () => {
     open: { opacity: 1, y: 0 },
   };
 
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      // Check if the click is outside the dropdown menu and if it's open
+      if (ref.current && !ref.current.contains(event.target as Node) && open) {
+        setOpen(false);
+      }
+    };
+
+    // Add event listener for clicks outside the menu
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      // Clean up event listeners on unmount
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [open]);
+
   const pathname = usePathname();
 
   return (
@@ -80,6 +101,7 @@ const DropdownMenu = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
+            ref={ref}
           >
             <Container className="flex items-center py-4">
               <motion.ul className="w-full space-y-3">
