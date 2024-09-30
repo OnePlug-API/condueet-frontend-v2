@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section className="grid grid-cols-[1.2fr_1.8fr] overflow-y-hidden max-md:grid-cols-1 md:h-screen">
-      <div className="h-screen space-y-8 overflow-hidden bg-[#e9effc] py-6 max-md:hidden">
+      <div className="h-full space-y-8 overflow-hidden bg-[#e9effc] py-6 max-md:hidden">
         <div className="flex flex-col items-center justify-center">
           <CondueetLogo />
         </div>
@@ -36,7 +36,7 @@ export default function Page() {
           />
         </MotionDiv>
       </div>
-      <section className="overflow-y-auto py-8 max-md:mx-auto max-md:w-[90%] md:h-screen md:p-8">
+      <section className="h-full w-full overflow-y-auto py-8 max-md:mx-auto max-md:px-4 md:p-8">
         <div className="w-full">
           <header className="mb-4 space-y-2 text-center">
             {/* <div className="flex flex-col items-center justify-center pb-6 md:hidden">

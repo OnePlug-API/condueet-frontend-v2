@@ -37,8 +37,8 @@ const Showcase = () => {
           </div>
           <MotionDiv
             initial={{ x: 20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.75 }}
             className="relative z-10 flex items-center justify-center"
           >
             <Image
@@ -46,7 +46,7 @@ const Showcase = () => {
               alt="Money Flow"
               height={300}
               width={300}
-              className="z-10 w-[95%] max-w-full object-contain lg:w-full"
+              className="z-10 w-[95%] max-w-md object-contain lg:w-full"
             />
             {/* <div className="absolute left-[30%] top-[-40%] z-0 h-full max-h-[600px] w-screen -rotate-[25deg] transform rounded-full bg-primary/80 xl:left-[50%]"></div> */}
           </MotionDiv>
@@ -56,8 +56,8 @@ const Showcase = () => {
         <Container className="z-10 grid grid-cols-1 items-center gap-12 lg:h-screen lg:max-h-[500px] lg:grid-cols-2 lg:gap-8">
           <MotionDiv
             initial={{ x: -20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.75 }}
             className="relative z-10 flex items-center justify-center max-lg:order-2"
           >
             <Image
@@ -65,7 +65,7 @@ const Showcase = () => {
               alt="Digital loan"
               height={300}
               width={300}
-              className="z-10 w-[95%] max-w-full object-contain lg:w-full"
+              className="z-10 w-[95%] max-w-md object-contain lg:w-full"
             />
             {/* <div className="absolute left-[30%] top-[-40%] z-0 h-full max-h-[600px] w-screen -rotate-[25deg] transform rounded-full bg-primary/80 xl:left-[50%]"></div> */}
           </MotionDiv>
@@ -112,8 +112,8 @@ const Showcase = () => {
           </div>
           <MotionDiv
             initial={{ x: 20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.75 }}
             className="relative z-10 flex items-center justify-center"
           >
             <Image
@@ -121,7 +121,7 @@ const Showcase = () => {
               alt="Verify Account"
               height={300}
               width={300}
-              className="z-10 w-[95%] max-w-full object-contain lg:w-full"
+              className="z-10 w-[95%] max-w-md object-contain lg:w-full"
             />
             {/* <div className="absolute left-[30%] top-[-40%] z-0 h-full max-h-[600px] w-screen -rotate-[25deg] transform rounded-full bg-primary/80 xl:left-[50%]"></div> */}
           </MotionDiv>
