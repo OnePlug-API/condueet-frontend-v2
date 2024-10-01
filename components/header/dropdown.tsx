@@ -40,6 +40,8 @@ export const links: Link[] = [
 const DropdownMenu = () => {
   const [open, setOpen] = useState(false);
 
+  const pathname = usePathname();
+
   const menuVariants: Variants = {
     closed: {
       opacity: 0,
@@ -85,7 +87,9 @@ const DropdownMenu = () => {
     };
   }, [open]);
 
-  const pathname = usePathname();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <Fragment>
