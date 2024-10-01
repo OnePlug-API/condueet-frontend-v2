@@ -6,7 +6,7 @@ import verify_account from "@assets/verify-account.png";
 import Link from "next/link";
 import { MotionDiv } from "../motion";
 
-const Showcase = () => {
+const ProductsAndSolutions = () => {
   return (
     <div className="space-y-14 pb-12">
       <Container>
@@ -130,4 +130,4 @@ const Showcase = () => {
     </div>
   );
 };
-export default Showcase;
+export default ProductsAndSolutions;
