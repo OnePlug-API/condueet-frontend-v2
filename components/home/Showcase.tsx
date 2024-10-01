@@ -21,12 +21,12 @@ const Showcase = () => {
               FINANCIAL DATA & OPEN BANKING
             </h4>
             <p className="mt-2 text-2xl font-bold md:leading-normal lg:text-3xl">
-              Comprehensive open banking solutions for effortless financial
+              Comprehensive open banking solution for effortless financial
               management
             </p>
             <p className="mt-6 text-fade">
               Providing cutting-edge solutions such as data aggregation,
-              financial insight, and efficient account verification
+              financial insights, and efficient account verification
             </p>
             <Link
               href="/register"
